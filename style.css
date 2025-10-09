@@ -406,7 +406,6 @@ section {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -1353,7 +1352,6 @@ button::before {
   /* Project overlay ajustado */
   .project-overlay {
     padding: 20px 15px;
-    /* padding: 5px; */
     max-height: 30vh;
   }
 
@@ -1373,14 +1371,14 @@ button::before {
   .project-info h3 {
     font-size: 1rem;
     margin-top: 50px;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin-bottom: 6px;
+    line-height: 1;
   }
 
   .project-info p {
-    font-size: 0.8rem;
-    line-height: 1.1;
-    margin-bottom: 15px;
+    font-size: 0.7rem;
+    line-height: 1;
+    margin-bottom: 8px;
     max-width: 220px;
     text-align: center;
   }
@@ -1392,13 +1390,15 @@ button::before {
 
   .project-tags {
     margin-left: 50px;
-    gap: 3px;
+    gap: 2px;
+    margin-bottom: 0;
   }
 
   /* Project Links */
   .project-links {
     margin-left: 100px;
     margin-bottom: 30px;
+    margin-top: 0;
   }
 
   .project-links a {
@@ -1490,12 +1490,8 @@ button::before {
   /* Footer  */
 
   #contact {
+    /* padding-top: 5vh; */
     padding: 80px 30px;
-  }
-
-  /* Ajuste de scroll para seção de contato */
-  #contact-Nav {
-    scroll-margin-top: 250px;
   }
 
   footer h2 {
@@ -1559,5 +1555,21 @@ button::before {
   .contact-wrapper {
     padding: 0;
   }
+}
 
+/* Ajuste para telas médias */
+@media (min-width: 900px) and (max-width: 1450px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .skill-item {
+    max-width: 200px;
+    width: 100%;
+  }
 }
